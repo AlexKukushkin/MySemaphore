@@ -1,9 +1,12 @@
 package com.company;
 
 public class BreadWarehouse {
-    private int counter;
+    private static int counter;
 
-    public synchronized void addBread(int count){
-        this.counter += count;
+    public static synchronized void addBread(int count){
+        counter += count;
+    }
+    public synchronized void printBread(){
+        System.out.println("Bread : " + counter);
     }
 }
