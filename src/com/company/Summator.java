@@ -14,11 +14,10 @@ public class Summator implements Runnable {
 
 //    Semaphore semaphore = new Semaphore();
 
-    public Summator(int bread, int milk, int beer, Semaphore semaphore) {
+    public Summator(int bread, int milk, int beer) {
         this.bread = bread;
         this.milk = milk;
         this.beer = beer;
-        this.semaphore = semaphore;
     }
 
     public synchronized void addProduct(int bread, int milk, int beer) {
@@ -29,7 +28,6 @@ public class Summator implements Runnable {
 
     public void run() {
         addProduct(bread, milk, beer);
-        semaphore.release();
     }
 
 }
