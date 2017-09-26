@@ -12,18 +12,12 @@ public class Main {
         Summator sum2 = new Summator(0, 0, 1);
         Summator sum3 = new Summator(0, 3, 0);
 
-        //sum1.breadWarehouse.addBread(10);
-        //sum2.milkWarehouse.addMilk(1);
-        //sum3.beerWarehouse.addBeer(3);
-
         new Thread(sum1).start();
         new Thread(sum2).start();
         new Thread(sum3).start();
 
-
         breadWarehouse.printBread();
         milkWarehouse.printMilk();
         beerWarehouse.printBeer();
-
     }
 }
